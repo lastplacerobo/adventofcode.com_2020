@@ -79,7 +79,7 @@ def main():
 
     print("Part1. Nr of valid passwords:", check_valid_pass_part1(pass_db))
 
-    print("Part1. Nr of valid passwords:", check_valid_pass_part2(pass_db))
+    print("Part2. Nr of valid passwords:", check_valid_pass_part2(pass_db))
 
 
 if __name__ == "__main__":
