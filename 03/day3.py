@@ -1,30 +1,12 @@
-
-
-def expand_grid(gd):
-
-    for num, line in enumerate(gd):
-        gd[num] = line + line
-
-    return gd
-
-
-def traverse_grid(gd):
-
+def traverse_map(tmap):
     trees = 0
     stepsr = 0
-    for num, line in enumerate(gd):
+    for num, line in enumerate(tmap):
 
-        if stepsr >= len(gd[num]):
-            gd = expand_grid(gd)
-
-        stepsr = stepsr + 3
+        stepsr += 3
 
         try:
-            if gd[num+1][stepsr] == "#":
-
-
-                x = gd[num+1]
-                y = gd[num+1][stepsr-1]
+            if tmap[num + 1][stepsr % len(line)] == "#":
                 trees += 1
 
         except:
@@ -35,11 +17,9 @@ def traverse_grid(gd):
 
 def main():
     f = open("input.txt", "r")
-    gd = f.read().splitlines()
+    tmap = f.read().splitlines()
 
-    print(traverse_grid(gd))
-
-
+    print("Part1, nr of trees:", traverse_map(tmap))
 
 
 if __name__ == "__main__":
