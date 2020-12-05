@@ -24,7 +24,7 @@ def open_and_sort_pass():
         elif len(line) == 0:
             y += 1
 
-    # Join the separate elements in the list so eatch key has one list with one element
+    # Join the separate elements in the list so each key has one list with one element
     for key, value in passports.items():
         passports[key] = " ".join(value)
 
