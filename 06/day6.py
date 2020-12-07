@@ -51,7 +51,6 @@ def count_answers_part2(forms):
 
             for char in pers:
 
-                # if char in group and counted_char[char] == len(group): ????
                 if counted_char[char] == len(group):
                     same_char.append(char)
 
